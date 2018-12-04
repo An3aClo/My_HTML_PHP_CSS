@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <titl>My cookie</titl>
+</head>
+<script>
+    function createCookie() {
+    
+       var cookieName = document.getElementById('customer').value;
+        
+         if (cookieName == "") { //emty value
+            alert("User must enter a name for the cookie");
+            return;
+        }
+        var expires = new Date(Date.now() + (30 * 24 * 60 * 60 * 1000)).toGMTString();
+        
+        document.cookie="customer= "+cookieName+"expires="+expires+";";
+      // alert ("Customer, "+cookieName+" Expires on= "+expires+";"); 
+        alert(document.cookie)
+    }
+    
+    
+    function deleteCookie(){
+        var cookieName = document.getElementById('customer').value;
+        var expires = new Date(Date.now() - (30 * 24 * 60 * 60 * 1000)).toGMTString();
+       
+         document.cookie="Customer= "+cookieName+" Expires =  "+expires+";";
+        document.write("The cookie is "+document.cookie);
+        alert("Cookie Deleted "+cookieName+" It will expire on "+expires);
+    }
+    
+    function readCookie(){
+        var allCookies=document.cookie;
+        alert(allCookies);
+        cookieArray=allCookies.split(";");
+        var name,value,dd;
+        for(var i=0; i<cookieArray.length;i++){
+            name=cookieArray[i].split(" = ")[0];
+            value=cookieArray[i].split(" = ")[1];
+            dd=cookieArray[i].split(" = ")[2];
+            document.write(name+value+dd+"<br>")
+        }
+        
+    }
+    
+</script>
+
+<body>
+    <form name="frmCookie"> Name:
+        <input type=text id="customer" name="customer">
+        <br>
+        <br>
+        <input type="button" value="Create" onclick="createCookie()">&nbsp;
+        <input type="button" value="Read Cookie" onclick="readCookie()">&nbsp;
+        <input type="button" value="Delete Cookie" onclick="deleteCookie()"> </form>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>Cookies</title>
+
+</head>
+<body>
+Name:<input type=text id=name>
+<button onclick="create()">Create</button>
+<button onclick="read()">Read</button>
+<button onclick="delete()">Delete</button>
+
+<script>
+function create(){
+var cName=document.getElementById('name').value;
+if(cName==""){
+alert("Enter a name");
+}
+var expire=new Date(Date.now()+(30*24*60*60*100)).toString;
+document.cookie="name: "+cName+" expires: "+expire+";";
+alert(document.cookie);
+}
+
+</script>
+
+
+</body>
+
+
+</html>
