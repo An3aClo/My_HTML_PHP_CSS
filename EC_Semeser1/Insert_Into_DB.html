@@ -1,0 +1,63 @@
+<?php
+
+$number=$_POST['number'];
+$Name==$_POST['Name'];
+$Cost==$_POST['Cost'];
+
+
+while (){
+
+}
+$query1="INSERT INTO `item`(`number`, `Name`, `Cost`) VALUES ('"$number"','"$Name"','"Cost"')";
+
+mysqli_query($con,$query1);
+
+?>
+
+<html>
+<head>
+    <title>
+    Insert
+    </title>
+    
+    </head>
+<body>
+    
+<form method="post" action="php">
+
+    <tr>
+        <td>
+        Number
+        </td>
+     <td>
+        <input type=text>
+        </td>
+        </tr>
+          <tr>
+        <td>
+        Name
+        </td>
+     <td>
+        <input type=text>
+        </td>
+        </tr>
+          <tr>
+        <td>
+        Cost
+        </td>
+     <td>
+        <input type=text>
+        </td>
+        </tr>
+        <tr>
+        
+        <td>
+            <input type= button value=Enter>
+            <input type=button value=Cancel>
+            </td>
+        </tr>
+        
+    
+    </form>
+    </body>
+</html>

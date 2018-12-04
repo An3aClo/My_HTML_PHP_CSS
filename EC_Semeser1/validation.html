@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript</title>
+    <script>
+        function validate() {
+            var name = document.getElementById('name');
+            // alert(name.value); // to see the value inserted under name
+            // alert(name.value.length); // To see the length of the character inserted under name
+            if (name.value.length == 0) {
+                alert("Enter name");
+                return false;
+            }
+            else {
+                return validateSurname();
+            }
+        }
+
+        function validateSurname() {
+            var surname = document.getElementById('surname');
+            if (surname.value.length == 0) {
+                alert("Enter surname");
+                return false;
+            }
+            else {
+                return validateAge();
+            }
+        }
+
+        function validateAge() {
+            var age = document.getElementById('age');
+            if (age.value < 15) {
+                alert("Too young to have kids kiddo!");
+            }
+            else {
+                return validateEmail();
+            }
+        }
+
+        function validateEmail() {
+            var email = document.getElementById('email');
+            if (email.indexOf('@') != -1) {
+                alert("Insert a correct email address");
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form method="post" action="enter.php" onsubmit="return validate()">
+        <table>
+            <tr>
+                <td> Name</td>
+                <td>
+                    <input type="text" name="name" id="name"> </td>
+            </tr>
+            <tr>
+                <td>Surname</td>
+                <td>
+                    <input type="text" name="surname" id="surname"> </td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td>
+                    <input type="text" name="age" id="age"> </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input type="text" name="email" id="email"> </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Submit"> </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

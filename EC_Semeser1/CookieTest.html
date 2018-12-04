@@ -1,0 +1,21 @@
+<html>
+<head>
+    <script>
+    
+    function writeCookie(){
+        if(document.frmCookie.customer.vlaue){alert("Enter a value"); return;}
+    }
+        
+        var cookieValue=escape(document.frmCookie.customer.value);
+        var currentDate= new Date();
+        currentDate.setTime(currentDate.getTime()+(30*24*60*60*1000));
+        var expires= currentDate.toGMTString();
+        var value=expires;
+        document.cookie=cookieValue+" "+value+";"+expires;
+        alert("name"+cookieValue+" date: "+expires);
+        
+    </script>
+    </head>
+<body><form><label>Enter name:</label><input type=text name="customer">
+    <input type="button" value ="set cookie" onClick="writeCookie"></form></body>
+</html>

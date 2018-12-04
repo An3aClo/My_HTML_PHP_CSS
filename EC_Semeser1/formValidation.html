@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Javascript | Form Validation</title>
+	<script>
+		var dropdown = document.getElementById("dropdownC");
+		var check = document.getElementById("checking");
+
+		function validate() {
+			var fname = document.getElementById("fname");
+			if (fname.value == "" || (fname.value.length <= 5 || fname.value.length >= 7)) {
+				document.getElementById("errorName").innerHTML = "A Name is required between 5 and 7 character";
+				document.getElementById("errorName").style.color = "red";
+				return false;
+			}
+			else {
+				document.getElementById("errorName").innerHTML = "";
+				return validatePassword();
+			}
+		}
+
+		function validatePassword() {
+			var password = document.getElementById("password");
+			if (password.value == "") {
+				document.getElementById("passwordError").innerHTML = "A Password is required";
+				document.getElementById("passwordError").style.color = "red";
+				return false;
+			}
+			else {
+				return validateEmail();
+			}
+		}
+
+		function validateEmail() {
+			var email = document.getElementById("email");
+			if (email.value == "") {
+				document.getElementById("errorEmail").innerHTML = "An email is required";
+				document.getElementById("errorEmail").style.color = "red";
+				return false;
+			}
+			else {
+				return validateRadio();
+			}
+		}
+
+		function validateRadio() {
+			var optionChoosen = "";
+			var options = formPay.paymentO.length;
+			for (var i = 0; i < options; i++) {
+				if (formPay.paymentO[i].checked) {
+					optionChoosen = formPay.paymentO[i].value;
+				}
+			}
+			if (optionChoosen == "") {
+				document.getElementById("errorRadio").innerHTML = "A payment option is required";
+				document.getElementById("errorRadio").style.color = "red";
+				return false;
+			}
+			else {
+				return true;
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<h1>Form Validation</h1>
+	<table>
+		<form name="formPay" method="post" action="enter.php">
+			<tr>
+				<td>First Name : </td>
+				<td>
+					<input type="text" name="fname" id="fname">
+				</td>
+				<td id="errorName"></td>
+			</tr>
+			<tr>
+				<td>Password : </td>
+				<td>
+					<input type="password" name="password" id="password">
+				</td>
+				<td id="passwordError"></td>
+			</tr>
+			<tr>
+				<td>Email : </td>
+				<td>
+					<input type="text" name="email" id="email">
+				</td>
+				<td id="errorEmail"></td>
+			</tr>
+			<tr>
+				<td>Payment Option : </td>
+				<td>
+					<input type="radio" name="paymentO" value="Credit Card"> Credit Card
+					<input type="radio" name="paymentO" value="Debit Card"> Debit Card
+					<input type="radio" name="paymentO" value="PayPal">PayPal </td>
+				<td id="errorRadio"></td>
+			</tr>
+			<tr>
+				<td>What else can we email you:</td>
+				<td>
+					<select type="dropdown" id="dropdownC">
+						<option value="none">None</option>
+						<option value="development">Web Development</option>
+						<option value="hosting">Web Hosting</option>
+						<option value="support">Technical Support</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Ticks to Accept Terms and Conditions</td>
+				<td>
+					<input type="checkbox" name="condition" id="checking" value="1">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="submit" value="SUBMIT" onClick="return validateName()"> </td>
+				<td>
+					<input type="reset" value="RESET">
+				</td>
+			</tr>
+		</form>
+	</table>
+</body>
+
+</html>

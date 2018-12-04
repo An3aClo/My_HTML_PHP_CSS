@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Storing a cookie</title>
+</head>
+<script>
+    function writeCookie() {
+        if (document.frmCookie.customer.value == " ") {
+            alert("Enter a vlaue");
+            return;
+        }
+        var cookieValue = escape(document, frmCookie.customer.value);
+        var currentDate = new Date();
+        currentDate.setTime(currentDate.getTime() + (30 * 24 * 60 * 60 * 1000));
+        var expires = currentDate.toGMTString();
+        var value = expires;
+        document.cookie = cookieValue + "=" + value + ";" + expires;
+        alert("Cookie: " + cookieValue + " set. It will expires on: " + expires);
+    }
+</script>
+
+<body>
+    <form name="frmCookie" actio="" method=""> Enter Name:
+        <input type="text" name="customer">
+        <input type="button" value="Set Cookie" onClick="writeCookie()"> </form>
+</body>
+
+</html>

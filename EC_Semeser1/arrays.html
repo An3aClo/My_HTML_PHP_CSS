@@ -1,0 +1,29 @@
+<! doctype html>
+<html>
+
+<head>
+    <title>Arrays</title>
+</head>
+<script>
+    var cars = ["Saab ", "Volvo ", "BMW"];
+
+    function AccesAElement() {
+        document.getElementById('p1').innerHTML = cars[0];
+    }
+
+    function AccesWholeArray() {
+        document.getElementById("p2").innerHTML = cars;
+    }
+  
+        
+    }
+    </script>
+
+<body>
+    <p id="p1"> </p>
+    <button onclick="AccesAElement">Click me </button>
+    <p id="p2"></p>
+    <button onclick="AccesWholeArray()">Array</button>
+</body>
+
+</html>

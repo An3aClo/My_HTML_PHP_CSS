@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>My JS Skills</title>
+
+</head>
+
+
+
+<body>
+<p id="myText">Click the button now</p><button id="button1" onclick="changeNow()">Click here</button>
+<p id="change">Hi Im here</p>
+
+
+<h1>My First Web Page</h1>
+<p>My First Paragraph</p>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<button onclick="c()">Change Me</button><button onclick="d()">Change Me Back</button>
+<img id="i" src="pic.jpg">
+<button onclick="writeMe()">Count 15 +15 together</button>
+<script>
+console.log(10+10);//shows 20 when you press F12
+alert(5+5);
+document.getElementById("demo").innerHTML = 5 + 6;
+
+function changeNow(){
+document.getElementById('myText').innerHTML="Hi daar";
+document.getElementById('change').innerHTML=Date();
+
+}
+
+document.getElementById("demo2").innerHTML = 5 + 7;
+function c(){
+document.getElementById('i').src="Myland.jpg";
+}
+
+function d(){
+document.getElementById('i').src="pic.jpg";
+}
+
+document.getElementById('demo').style.fontSize = '35px';
+document.getElementById("demo").style.display = "block";
+document.write(10+10);
+document.write("This is me");
+
+function writeMe(){
+var x=5+5;
+document.write("Hi");//opens a tab
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
