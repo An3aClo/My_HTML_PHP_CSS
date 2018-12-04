@@ -1,0 +1,187 @@
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #ccc;
+     padding: 0px 370px;
+    //border-left: 152px solid #d1ecdd;
+    //border-right: 152px solid #d1ecdd;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+tabcontent {
+    animation: fadeEffect 1s;
+    /* Fading effect takes 1 second */
+}
+
+
+/* Go from zero to full opacity */
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+	height: 45%
+}
+
+.me {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 50%;
+    width: 200px;
+    height: 240px;
+    border="1px"
+}
+.author {
+    font-family: inherit;
+    font-size: 20;
+    text-align: center;
+}
+
+.maps {
+    margin-top: 20;
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+    height: 550px;
+    border-left: 152px solid white;
+    border-right: 152px solid white;
+}
+
+.d {
+    margin-left: 20px;
+    font-family: inherit;
+    font-size: 20;
+    text-align: justify;
+}
+
+.WhyImportantHeader {
+    font-size: 45;
+    font-family: inherit;
+    padding: 0px 30px;
+    // color:deepskyblue;
+    text-align: center;
+}
+
+.WhyImportant {
+    font-family: inherit;
+    font-size: 20;
+    text-align: justify;
+    padding: 0px 30px;
+    border-left: 152px solid #d1ecdd;
+    border-right: 152px solid #d1ecdd;
+    align-content: center;
+    // background-color:#f1f1f1; 
+    border-bottom:152px solid #d1ecdd; 
+    border-top: 20px solid #d1ecdd;
+}
+
+.WhyImportantTop {
+    font-family: inherit;
+    font-size: 20;
+    text-align: justify;
+    padding: 0px 30px;
+     border-bottom:  20px solid #d1ecdd;
+    //border-left: 152px solid white;
+    //border-right: 152px solid white;
+    align-content: center;
+    // background-color:#f1f1f1; 
+   
+          // border-top:  20px solid #d1ecdd;
+    
+}
+
+.twirl {
+    width: 150;
+    height: 50;
+    align-content: center
+}
+
+.contactDetail {
+    font-size: 20;
+    text-align: center;
+    border: 1px solid #ccc;
+    // background-color: lightblue;
+}
+
+.contactGat {
+    font-size: 26;
+    font-family: inherit;
+    text-align: center;
+    //background-image: "two.PNG";
+}
+
+.video {
+    width="420" height="340"
+}
+
+
+.myList{
+    
+    border-left: 12px solid white;
+    border-right: 52px solid white;
+}
+.button {
+    background-color:skyblue;
+    border: none;
+    color: black;    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.topnav{
+	padding: 0px 30px;
+    border-left: 510px solid white ;
+    //border-right: 152px solid ;
+}
+.sub{
+	 background-color:skyblue;
+    border: none;
+    color: black;    padding: 4px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	
+}
+
