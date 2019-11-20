@@ -1,15 +1,10 @@
 <html>
-
-
+	
 <head>
 
     <title>JB Express Home</title>
     <link rel="icon" type="image/png" href="Images/12540@2x.png">
-
     <script src='https://www.google.com/recaptcha/api.js'></script>
-
-
-
 </head>
 
 <link rel="stylesheet" href=MyStyle.css>
@@ -56,8 +51,6 @@
     }
     
 ?>
-
-
     <div class="hero-image">
         <div class="hero-text">
             <h1 style="font-size:100px;margin-top:0px !important;">JB Express</h1>
@@ -125,11 +118,7 @@
                     <div class="row">
                         <div class="column2">
                             <center>
-
-
                                 <input type="submit" value="Register" id=submit onclick="return validateName()">
-
-
                             </center>
                         </div>
                         <div class="row">
@@ -138,13 +127,8 @@
                             </div>
                         </div>
                     </div>
-
-
                 </form>
-
             </fieldset>
-
-
         </div>
         <table border="0" width=100% height=15% cellspacing=0 padding=50px class=myColor>
             <tr>
@@ -153,14 +137,8 @@
                 </td>
             </tr>
         </table>
-
     </div>
-
-
-
-
-
-
+	
     <script>
         function validateName() {
             var name = document.getElementById('registerfname');
@@ -214,7 +192,6 @@
                 } else {
                  //   alert("num");
                    return validatePassword();
-
                 }
             }
 
@@ -229,10 +206,8 @@
                     alert("You are now a registered client of JB Express");
                     //return validateBot();
                 }
-            }
+	    }
 
     </script>
-
 </body>
-
 </html>
